@@ -30,7 +30,7 @@ const listBD = [{
 },
 {
     "id": 5,
-    "title": "Sillage, 01 A feu et à cendre",
+    "title": "Sillage, 01 A feu et à cendres",
     "author": "Jean-David Morvan, Philippe Buchet",
     "year": "1998"
 },
