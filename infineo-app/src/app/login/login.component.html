@@ -1,0 +1,19 @@
+<div>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" formControlName="username"/>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" formControlName="password"/>
+        </div>
+        <button class="button" type="submit">Submit</button>
+        <div *ngIf="submitted && connectionRefused">
+            Identifiant ou mot de passe incorrect
+        </div>
+        <div *ngIf="submitted && loginForm.invalid">
+            Remplissez les champs nécessaires
+        </div>
+    </form>
+</div>

@@ -1,0 +1,14 @@
+<h2>Liste des albums disponibles</h2>
+
+<ul class="liste-container">
+    <span *ngFor="let item of listItems">
+        <li>
+            <b>{{item.title}}</b><br/>
+            <i class="item-author">{{item.author}}</i>
+            {{item.year}}
+        </li>
+        <button *ngIf="isLogged" (click)="addToCart(item.id)">Ajouter au panier</button>
+        <button *ngIf="isLogged && userCart.includes(item.id)" (click)="removeToCart(item.id)">Retirer du panier</button>
+        <hr>
+    </span>
+</ul>

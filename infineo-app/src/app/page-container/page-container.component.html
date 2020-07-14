@@ -1,0 +1,9 @@
+<span *ngIf="isLogged; else notLogged">
+    <button type="button" class="btn"><a routerLink="/cart">Panier</a></button>
+    <button type="button" class="btn" (click)="logout()">Logout</button>
+</span>
+<ng-template #notLogged>
+    <button type="button" class="btn"><a routerLink="/login">Login</a></button>
+</ng-template>
+<router-outlet></router-outlet>
+<app-list></app-list>

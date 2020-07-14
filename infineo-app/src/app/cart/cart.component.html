@@ -1,0 +1,13 @@
+<h2>Votre Panier</h2>
+
+<ul class="liste-container">
+    <span *ngFor="let item of listItemsInCart">
+        <li>
+            {{item.title}}
+            <i>{{item.author}}</i>
+            {{item.year}}
+        </li>
+        <button (click)="removeToCart(item.id)">Retirer du panier</button>
+    </span>
+    
+</ul>
